@@ -5,9 +5,10 @@ console.log('***** Cart Functions *****');
 const basket = []; // the basket
 
 function addItem (item) {
+  basket.push(item) // puts the item in the basket
   return true; // indicates item was added to basket
 }
-
+/*
 fuction listItems (array) {
   // loop to list each item on a new line
 }
@@ -15,3 +16,9 @@ fuction listItems (array) {
 function empty(array) {
   // resets basket to empty array
 }
+*/
+
+console.log('***** TESTING function addItem *****'); // header
+console.log(`Basket has: ${basket}`); // initial contents of basket should be empty
+console.log(`Adding mozzarella (expect true), ${addItem('mozzarella')}`); // adding mozzarella and outputs true if added to basket
+console.log(`Basket has: ${basket}`); // shows basket with mozzarella

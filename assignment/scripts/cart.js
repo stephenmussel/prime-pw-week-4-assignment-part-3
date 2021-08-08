@@ -10,12 +10,10 @@ function addItem (item) {
 }
 
 function listItem (array) {
-  // loop to list each item on a new line
-  for (let i = 0; i <basket.length; i++) {
-    console.log(basket[i]);
+  for (let item of basket) {   // loop to list each item on a new line
+  console.log(`Item in the basket: ${item}`);
   }
 }
-
 
 /*
 function empty(array) {

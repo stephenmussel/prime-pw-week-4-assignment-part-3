@@ -83,4 +83,4 @@ console.log(`Is the basket full?: ${isFull()}`); // shows basket with fruit and 
 console.log('***** TESTING function removeItem *****');
 console.log(`This is what's in the basket now: ${basket}`); // checking to see what's in the basket. it's full
 console.log(`This what's in the basket now: ${basket}. If there are peaches, remove them: ${removeItem('peaches')}.`); // removing existing item from basket
-console.log(`This what's in the basket now: ${basket}. If there are apples, remove them: ${removeItem('apples')}.`); // item not found
+console.log(`This what's in the basket now: ${basket}. If there are apples, remove them: ${removeItem('apples')}.`); // item not found and returns null

@@ -3,6 +3,8 @@ console.log('***** Cart Functions *****');
 // We want to see how you are testing your code!!!
 
 const basket = []; // the basket
+let basketEmpty = true;
+const maxItems = 5;
 
 function addItem (item) {
   basket.push(item) // puts the item in the basket
@@ -15,11 +17,20 @@ function listItem (array) {
   }
 }
 
-/*
 function empty(array) {
-  // resets basket to empty array
+  while (basket.length > 0) {
+    basket.pop();
+  }
 }
-*/
+
+function isFull() {
+  if (basket.length < maxItems) { // if basket contains less than max number of items
+    return false;
+  }
+  else { // basket contains equal or more than maxItems
+    return true;
+  }
+}
 
 console.log('***** TESTING function addItem *****'); // header
 console.log(`Basket has: ${basket}`); // initial contents of basket should be empty
@@ -29,4 +40,10 @@ console.log(`Adding cucumber (expect true), ${addItem('cucumber')}`); // adding 
 console.log(`Basket has: ${basket}`); // shows basket with mozzarella
 
 console.log('***** TESTING function listItem *****'); // header
-console.log(listItem());
+console.log(listItem()); // lists items on separate line but outputs another line as undefined!?
+
+console.log('***** TESTING function empty *****'); // header
+console.log(empty()); // basket empty
+
+console.log('***** TESTING function full *****'); // header
+console.log(isFull()); // basket is not full

@@ -19,16 +19,34 @@ function addItem (item) {
   }
 }
 
-function listItem (array) {
+// submitted for assignment
+// function listItem (array) {
+//   for (let item of basket) {   // loop to list each item on a new line
+//     console.log(`Item in the basket: ${item}`);
+//   }
+// }
+
+function listItem () {
   for (let item of basket) {   // loop to list each item on a new line
     console.log(`Item in the basket: ${item}`);
   }
 }
 
-function empty(array) {
-  while (basket.length > 0) { // loops list to remove last item until basket empty
-    basket.pop();
-  }
+// function listItem (array) {
+//   for (let item of array) {   // loop to list each item on a new line
+//     console.log(`Item in the basket: ${item}`);
+//   }
+// }
+
+// submitted for assignment
+// function empty(array) {
+//   while (basket.length > 0) { // loops list to remove last item until basket empty
+//     basket.pop();
+//   }
+// }
+
+function empty() {
+  basket.length = 0; // empties basket
 }
 
 function isFull() {
@@ -59,6 +77,7 @@ console.log(`Basket has: ${basket}`); // shows basket with mozzarella
 
 console.log('***** TESTING function listItem *****');
 console.log(listItem()); // lists items on separate line but outputs another line as undefined!?
+// console.log(listItem(basket)); // testing line 35-39
 
 console.log('***** TESTING function empty *****');
 console.log(empty()); // basket empty
